@@ -13,7 +13,23 @@ namespace AzureIoTClient_XF
         {
             InitializeComponent();
 
-            MainPage = new AzureIoTClient_XF.MainPage();
+            MainPage = new AzureIoTClient_XF.MenuPage();
+        }
+
+        //public static Tuple<ToolbarItem, ToolbarItem> SetupToolbarItems()
+        public static (ToolbarItem, ToolbarItem) SetupToolbarItems()
+        {
+            ToolbarItem TbiNewDevice = new ToolbarItem
+            {
+                Text = "New Device",
+            };
+
+            ToolbarItem TbiAbout = new ToolbarItem
+            {
+                Text = "About"
+            };
+
+            return (TbiNewDevice, TbiAbout);
         }
 
         protected override void OnStart()
